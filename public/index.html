@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="/logo192.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <title>Grocery List</title>
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <!-- magnific-popup css -->
+    <link href="assets/libs/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css" />
+
+    <!-- owl.carousel css -->
+    <link rel="stylesheet" href="assets/libs/owl.carousel/assets/owl.carousel.min.css">
+
+    <link rel="stylesheet" href="assets/libs/owl.carousel/assets/owl.theme.default.min.css">
+    <style type="text/css">
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+          'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+          'Helvetica Neue', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      code {
+        font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+          monospace;
+      }
+      .navbar {
+        background-color: #00a5d0;
+        padding: 12px 12px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      h3 {
+        margin: 0px 0px;
+        font-size: 24px;
+      }
+
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 600;
+        margin: 0px 0px 0px 12px;
+      }
+
+      p,
+      li {
+        padding: 0px 0px 0px 8px;
+      }
+
+      p {
+        font-weight: 600;
+      }
+
+      .Purchased {
+        text-decoration: line-through;
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+         
+            navigator.serviceWorker.register("firebase-messaging-sw.js").then(function(reg) {
+              console.log("register", reg);
+            }).catch(function(err) {
+              console.log("err", err);
+            });
+            navigator.serviceWorker.register('worker.js').then(function (registration) {console.log('Worker registration successful',registration.scope);},function (err) {console.log('Worker registration failed', err);})
+            .catch(function (err) {
+              console.log(err);
+            });
+        });
+        
+      } else {
+        console.log('Service Worker is not supported by browser.');
+      }
+    </script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="./firebase/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="./firebase/firebase-messaging.js"></script>
+    <script src="assets/libs/jquery/jquery.min.js"></script>
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="assets/libs/node-waves/waves.min.js"></script>
+
+    <!-- Magnific Popup-->
+    <script src="assets/libs/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- owl.carousel js -->
+    <script src="assets/libs/owl.carousel/owl.carousel.min.js"></script>
+
+    <!-- page init -->
+    <script src="assets/js/pages/index.init.js"></script>
+
+    <script src="assets/js/app.js"></script>
+    <!-- Initialize Firebase -->
+  </body>
+</html>

@@ -1,0 +1,343 @@
+.input-group .input-group-text:first-child{
+    border-right: 0px solid transparent!important;
+}
+.input-group .input-group-text,
+.input-group .form-control{
+    background-color: rgba(var(--bs-light-rgb),var(--bs-bg-opacity))!important;
+}
+.border-left-0{
+    border-left: 0px solid var(--bs-light)!important;
+}
+.input-group .pl-0{
+    padding-left: 0px!important;
+}
+.placeholder {
+    color: #65657b;
+    font-family: sans-serif;
+    left: 20px;
+    line-height: 14px;
+    pointer-events: none;
+    position: absolute;
+    transform-origin: 0 50%;
+    transition: transform 200ms, color 200ms;
+    top: 20px;
+}
+.inline-text-field-container {
+    display: flex;
+    flex-direction: column;
+}
+.input-container{
+    width: 100%;
+    position: relative;
+height: 45px;
+}
+.input-container .label{
+    position: absolute;
+    left: 1rem;
+    top: 12px;
+    transition: all 0.2s;
+    padding: 0px 2px;
+    z-index: 1;
+    user-select: none;
+    background-color: transparent;
+}
+.input-container .text-input{
+    padding: .7rem 1rem;
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--bs-light)!important;;
+    border-radius: 5px;
+    font-size: var(--font-16);
+    outline: none;
+    background-color: var(--bs-card-bg);
+    color: var(--bs-body-color);
+    transition: all 0.3s;
+}
+.input-container .text-input .label::before{
+    content: "";
+    height: 5px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    z-index: -1;
+}
+.input-container .text-input:focus{
+    border: 1px solid var(--bs-light)!important;;
+}
+.input-container .text-input:focus + .label{
+    top: -9px;
+    color: var(--bs-sidebar-menu-item-active-color);
+    font-size: var(--font-12);
+    left: 12px;
+    background-color: transparent!important;
+}
+.input-container .text-input::placeholder{
+    font-size: var(--font-16);
+    opacity: 0px;
+    transition: all 0.3s;
+    color: transparent;
+}
+.input-container .text-input:focus::placeholder{
+    opacity: 1;
+    color: var(--bs-body-color);
+
+}
+.input-container .text-input:not(:placeholder-shown)+ .label{
+    top: -9px;
+    color: var(--bs-sidebar-menu-item-active-color);
+    font-size: var(--font-12);
+    background-color: transparent!important;;
+    left: 12px;
+}
+/* Left Icon */
+.input-left-container{
+    width: 100%;
+    position: relative;
+height: 45px;
+}
+.input-left-container .label{
+    position: absolute;
+    left: 45px;
+    top: 12px;
+    transition: all 0.2s;
+    padding: 0px 2px;
+    z-index: 1;
+    font-size: var(--font-14);
+    user-select: none;
+    background-color: transparent;
+}
+.input-left-container .left-icon ~ .text-input{
+    padding: .7rem 1rem .7rem 3rem;
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--bs-light)!important;;
+    border-radius: 5px;
+    font-size: var(--font-14);
+    outline: none;
+    background-color: var(--bs-card-bg);
+    color: var(--bs-body-color);
+    transition: all 0.3s;
+}
+.input-left-container .left-icon{
+    position: absolute;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    z-index: 1;
+    font-size: var(--font-20);
+}
+.input-left-container .left-icon ~ .text-input .label::before{
+    content: "";
+    height: 5px;
+    position: absolute;
+    left: 0px;
+    top: 12px;
+    width: 100%;
+    z-index: -1;
+}
+.input-left-container .left-icon ~ .text-input:focus{
+    border: 1px solid var(--bs-light)!important;;
+}
+.input-left-container .left-icon ~ .text-input:focus + .label{
+    top: -9px;
+    left: 12px;
+    color: var(--bs-sidebar-menu-item-active-color);
+    font-size: var(--font-12);
+    background-color: transparent!important;
+}
+.input-left-container .left-icon ~ .text-input::placeholder{
+    font-size: var(--font-14);
+    opacity: 0px;
+    transition: all 0.3s;
+    color: transparent;
+}
+.input-left-container .left-icon ~ .text-input:focus::placeholder{
+    opacity: 1;
+    color: var(--bs-body-color);
+
+}
+.input-left-container .left-icon ~ .text-input:not(:placeholder-shown)+ .label{
+    top: -9px;
+    color: var(--bs-sidebar-menu-item-active-color);
+    font-size: var(--font-12);
+    background-color: transparent!important;
+    left: 12px;
+    position: absolute;
+}
+/* Right Icon Input */
+.input-right-container{
+    width: 100%;
+    position: relative;
+height: 45px;
+}
+.input-right-container .label{
+    position: absolute;
+    left: 1rem;
+    top: 12px;
+    transition: all 0.2s;
+    padding: 0px 1px;
+    z-index: 1;
+    font-size: var(--font-14);
+    user-select: none;
+    background-color: transparent;
+}
+.input-right-container .right-icon ~ .text-input{
+    padding: .7rem 3rem .7rem 1rem;;
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--bs-light)!important;;
+    border-radius: 5px;
+    font-size: var(--font-14);
+    outline: none;
+    background-color: var(--bs-card-bg);
+    color: var(--bs-body-color);
+    transition: all 0.3s;
+}
+.input-right-container .right-icon{
+    position: absolute;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    z-index: 1;
+    font-size: var(--font-20);
+    right: 0px;
+}
+.input-right-container .right-icon ~ .text-input .label::before{
+    content: "";
+    height: 5px;
+    position: absolute;
+    left: 0px;
+    top: 12px;
+    width: 100%;
+    z-index: -1;
+}
+.input-right-container .right-icon ~ .text-input:focus{
+    border: 1px solid var(--bs-light)!important;;
+}
+.input-right-container .right-icon ~ .text-input:focus + .label{
+    top: -9px;
+    left: 12px;
+    color: var(--bs-sidebar-menu-item-active-color);
+    font-size: var(--font-12);
+    background-color: transparent!important;
+}
+.input-right-container .right-icon ~ .text-input::placeholder{
+    font-size: var(--font-14);
+    opacity: 0px;
+    transition: all 0.3s;
+    color: transparent;
+}
+.input-right-container .right-icon ~ .text-input:focus::placeholder{
+    opacity: 1;
+    color: var(--bs-body-color);
+
+}
+.input-right-container .right-icon ~ .text-input:not(:placeholder-shown)+ .label{
+    top: -9px;
+    color: var(--bs-sidebar-menu-item-active-color);
+    font-size: var(--font-12);
+    background-color: transparent!important;
+    left: 12px;
+    position: absolute;
+}
+
+/* Icon inputs */
+.input-icon-container .icon-label.lefts_icon{
+    left: 0px;
+}
+.input-icon-container .icon-label.rights_icon{
+    right: 0px;
+    top: 0px;
+}
+.input-icon-container{
+    width: 100%;
+    position: relative;
+height: 45px;
+}
+.input-icon-container .label{
+    position: absolute;
+    left: 45px;
+    top: 12px;
+    transition: all 0.2s;
+    padding: 0px 2px;
+    z-index: 1;
+    font-size: var(--font-14);
+    user-select: none;
+    background-color: transparent;
+}
+.input-icon-container .icon-label ~ .text-input{
+    padding: .7rem 3rem .7rem 3rem;
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--bs-light)!important;;
+    border-radius: 5px;
+    font-size: var(--font-14);
+    outline: none;
+    background-color: var(--bs-card-bg);
+    color: var(--bs-body-color);
+    transition: all 0.3s;
+}
+.input-icon-container .icon-label{
+    position: absolute;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    z-index: 1;
+    font-size: var(--font-20);
+}
+.input-icon-container .icon-label ~ .text-input .label::before{
+    content: "";
+    height: 5px;
+    position: absolute;
+    left: 0px;
+    top: 12px;
+    width: 100%;
+    z-index: -1;
+}
+.input-icon-container .icon-label ~ .text-input:focus{
+    border: 1px solid var(--bs-light)!important;
+}
+.input-icon-container .icon-label ~ .text-input:focus + .label{
+    top: -9px;
+    left: 12px;
+    color: var(--bs-sidebar-menu-item-active-color);
+    font-size: var(--font-12);
+    background-color: transparent!important;
+}
+.input-icon-container .icon-label ~ .text-input::placeholder{
+    font-size: var(--font-14);
+    opacity: 0px;
+    transition: all 0.3s;
+    color: transparent;
+}
+.input-icon-container .icon-label ~ .text-input:focus::placeholder{
+    opacity: 1;
+    color: var(--bs-body-color);
+
+}
+.btn{
+    border: 1px solid transparent!important;
+    border-radius: var(--card-radius)!important;;
+}
+.btn:hover,
+.btn:focus,
+.btn:active:focus{
+    outline: 0px!important;
+    box-shadow: 0px 0px 0px 0px transparent!important;
+    border: 1px solid transparent!important;
+}
+.input-icon-container .icon-label ~ .text-input:not(:placeholder-shown)+ .label{
+    top: -9px;
+    color: var(--bs-sidebar-menu-item-active-color);
+    font-size: var(--font-12);
+    background-color: transparent!important;
+    left: 12px;
+    position: absolute;
+}
